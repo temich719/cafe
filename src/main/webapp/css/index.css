@@ -1,0 +1,224 @@
+body {
+  background-image: url("img/bu2.jpg");
+  overflow-x: hidden;
+}
+
+.topMenuBackground {
+  background: linear-gradient(to right, rgb(202, 10, 10), yellow);
+  width: 100%;
+  height: 30%;
+  position: absolute;
+  padding: 0;
+  margin-left: -0.5%;
+  margin-top: -0.7%;
+}
+
+.logo {
+  width: 354px;
+  height: 274px;
+  position: absolute;
+  margin-left: 35%;
+  margin-top: -6%;
+}
+
+nav {
+  position: absolute;
+  margin-top: 15%;
+  width: 80%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  margin-left: 18%;
+  padding-left: 0;
+  height: 72.36px;
+}
+
+ul > li > a {
+  text-decoration: none;
+  background: #dcdcdc;
+  color: rgb(145, 27, 27);
+  padding: 0px 15px;
+  line-height: 70px;
+  display: block;
+  border: #dcdcdc solid 1px;
+  border-right: 1px solid #dcdcdc;
+  height: 72.36px;
+  text-align: center;
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+  font-size: 14px;
+}
+
+ul > li > a:hover {
+  background: rgb(145, 27, 27);
+  color: white;
+}
+
+li {
+  float: left;
+  margin-right: 5px;
+  width: 235px;
+}
+
+li > ul {
+  position: absolute;
+  top: 72px;
+  left: 0px;
+  display: none;
+}
+
+.menu li:hover > ul {
+  display: block;
+  width: 194px;
+  margin-left: 18%;
+  z-index: 1;
+}
+li:hover > ul > li {
+  float: none;
+}
+
+#mainDiv {
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  height: 1100px;
+  margin-top: 22%;
+  margin-left: 17%;
+  position: absolute;
+}
+
+#mainDivDish{
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  height: 800px;
+  margin-top: 22%;
+  margin-left: 17%;
+  position: absolute;
+}
+
+#mainDivThanks{
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  height: 690px;
+  margin-top: 15%;
+  margin-left: 17%;
+  position: absolute;
+}
+
+#mainDivOrders{
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  height: 690px;
+  margin-top: 18%;
+  margin-left: 17%;
+  position: absolute;
+}
+
+#mainDivForm{
+  background-color: white;
+  border-radius: 10px;
+  width: 60%;
+  height: 390px;
+  margin-top: 18%;
+  margin-left: 17%;
+  position: absolute;
+}
+
+.productButton {
+  background: none;
+  border-radius: 15px;
+  border: 1px solid rgb(145, 27, 27);
+  width: 250px;
+  height: 250px;
+  background-color: rgb(145, 27, 27);
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+
+.productButton:hover {
+  background-color: #ffd700;
+  border: 1px solid #ffd700;
+}
+
+.formProductButton {
+  float: left;
+  margin-left: 4%;
+  margin-bottom: 2%;
+  margin-top: 2%;
+  -moz-transition: all 0.3s 0.01s ease;
+  -o-transition: all 0.3s 0.01s ease;
+  -webkit-transition: all 0.3s 0.01s ease;
+}
+
+.product:hover {
+  cursor: pointer;
+  border-radius: 0%;
+}
+
+.product:hover span {
+  color: white;
+}
+
+.product:hover p {
+  color: white;
+}
+
+.dishName {
+  font-size: 24px;
+  color: white;
+  padding-left: 4%;
+  padding-top: 2%;
+}
+
+.spanPrice {
+  font-size: 20px;
+  color: white;
+}
+
+.dishImage {
+  width: 300px;
+  width: 204.25px;
+  padding-top: 4px;
+  padding-left: 5px;
+}
+
+.pages:hover {
+  color: rgb(164, 35, 168);
+  cursor: pointer;
+}
+
+.botLogo {
+  margin-top: -15%;
+  margin-left: 10%;
+}
+
+#but:hover{
+  cursor: pointer;
+}
+
+.choice{
+  background-color: orange;
+  color: white;
+  width: 250px;
+  height: 60px;
+  border: none;
+  float: left;
+  margin-right: 5%;
+}
+
+.choice:hover{
+  cursor: pointer;
+}
+
+.findForm{
+  position: absolute;
+  margin-top: 15%;
+  margin-left: 32%;
+}
