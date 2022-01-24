@@ -7,8 +7,9 @@
     <head>
         <meta charset="UTF-8">
         <title>Error Page</title>
+        <link rel="stylesheet" href="css/index.css">
     </head>
-    <body>
+    <body style="background-image: url('../img/bu2.jpg');">
         <h1>
             Error!
         </h1>

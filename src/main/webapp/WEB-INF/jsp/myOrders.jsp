@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="css/index.css">
     </head>
 
-    <body>
+    <body style="background-image: url('../img/bu2.jpg');">
         <span class="topMenuBackground"></span>
         <div>
             <img src="img/logo2.png" alt="logo" class="logo">
