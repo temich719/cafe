@@ -30,6 +30,7 @@ public class CommandFactory {
             }
         } else {
             LOGGER.error("Illegal arguments in CommandFactory");
+            request.setAttribute(ControllerStringsStorage.ERROR, ControllerStringsStorage.COMMAND_NOT_FOUND);
         }
         return command;
     }
