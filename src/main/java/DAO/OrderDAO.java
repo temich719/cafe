@@ -1,18 +1,18 @@
 package DAO;
 
 import DAO.domain.Order;
-import DAO.domain.Product;
+import DAO.exception.DAOException;
 
 import java.util.List;
 
 public interface OrderDAO {
-    List<Order> getListOfOrdersByPhoneNumber(String phoneNumber);
+    List<Order> getListOfOrdersByPhoneNumber(String phoneNumber) throws DAOException;
 
-    boolean addOrder(List<Product> dishes, String phoneNumber, String consumerName, String orderTime);
+    void addOrder(String dishes, String fullPrice, String phoneNumber, String consumerName, String orderTime) throws DAOException;
 
-    List<Order> getListOfOrders();
+    List<Order> getListOfOrders() throws DAOException;
 
-    void deleteOrderByID(int id);
+    void deleteOrderByID(int id) throws DAOException;
 
-    void markOrderAsReady(int id);
+    void markOrderAsReady(int id) throws DAOException;
 }

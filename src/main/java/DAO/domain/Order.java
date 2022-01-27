@@ -1,55 +1,49 @@
 package DAO.domain;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Order {
     private int id;
-    private final List<Product> dishes;
+    private final String dishes;
+    private final String fullPrice;
     private final String phoneNumber;
     private final String consumerName;
     private final String orderTime;
     private final String status;
 
-    public Order(ArrayList<Product> dishes, String phoneNumber, String consumerName, String time, String status) {
+    public Order(String dishes, String fullPrice, String status){
         this.dishes = dishes;
+        this.fullPrice = fullPrice;
+        this.status = status;
+        this.phoneNumber = "";
+        this.consumerName = "";
+        this.orderTime = "";
+    }
+
+    public Order(String dishes, String fullPrice, String phoneNumber, String consumerName, String time, String status) {
+        this.dishes = dishes;
+        this.fullPrice = fullPrice;
         this.phoneNumber = phoneNumber;
         this.consumerName = consumerName;
         this.orderTime = time;
         this.status = status;
     }
 
-    public Order(int id, ArrayList<Product> dishes, String phoneNumber, String consumerName, String time, String status) {
+    public Order(int id, String dishes, String fullPrice, String phoneNumber, String consumerName, String time, String status) {
         this.id = id;
         this.dishes = dishes;
+        this.fullPrice = fullPrice;
         this.phoneNumber = phoneNumber;
         this.consumerName = consumerName;
         this.orderTime = time;
         this.status = status;
-    }
-
-    public String getFullOrderName(){
-        StringBuilder fullOrderName = new StringBuilder(dishes.get(0).getDishName());
-        for (int i = 1;i < dishes.size();i++){
-            fullOrderName.append(",").append(dishes.get(i).getDishName());
-        }
-        return fullOrderName.toString();
-    }
-
-    public String getFullOrderPrice(){
-        int fullOrderPrice = 0;
-        for (Product product:dishes) {
-            fullOrderPrice += Integer.parseInt(product.getPrice());
-        }
-        return String.valueOf(fullOrderPrice);
     }
 
     public int getId() {
         return id;
     }
 
-    public List<Product> getDishes() {
+    public String getDishes() {
         return dishes;
     }
 
@@ -67,6 +61,10 @@ public class Order {
 
     public String getStatus() {
         return status;
+    }
+
+    public String getFullPrice() {
+        return fullPrice;
     }
 
     @Override

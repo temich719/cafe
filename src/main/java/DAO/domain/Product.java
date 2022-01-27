@@ -18,6 +18,15 @@ public class Product {
         this.picture = picture;
     }
 
+    public Product(int id, String dishName, String price, String picture){
+        this.id = id;
+        this.dishName = dishName;
+        this.price = price;
+        this.picture = picture;
+        this.description = "";
+        this.category = "";
+    }
+
     public Product(int id, String dishName, String price, String description, String category, String picture) {
         this.id = id;
         this.dishName = dishName;
