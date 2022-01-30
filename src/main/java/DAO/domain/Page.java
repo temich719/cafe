@@ -16,7 +16,7 @@ public class Page<T> {
         return elements;
     }
 
-    public List<String> getNumberOfPages() {
+    public List<String> getNumbersOfPages() {
         return numberOfPages;
     }
 

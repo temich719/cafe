@@ -30,157 +30,37 @@
                  </ul>
             </nav>
         </div>
-        <div id="mainDiv">
+        <div id="mainDiv" style="${applicationScope['pixels']}">
             <h1 style="margin-left: 44%;margin-top: 3%;font-family:Denistina;font-size: 50px;">Меню</h1>
 
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
-            <form action="" class="formProductButton">
-                <button class="productButton">
-                    <div class="product" style="text-align: left;">
-                        <span class="dishName">
-                            <span>Хлеб</span>
-                        </span>
-                        <span class="spanPrice">
-                            <p class="price">26 800$</p>
-                        </span>
-                        <img src="img/bread2-removebg-preview.png" alt="dish" class="dishImage">
-                    </div>
-                </button>
-            </form>
+            <c:forEach var="product" items="${applicationScope['def_products']}" >
+                <form action="FrontController" class="formProductButton">
+                    <button class="productButton">
+                        <div class="product" style="text-align: left;">
+                            <span class="dishName">
+                                <span><c:out value="${product.getDishName()}" /></span>
+                            </span>
+                            <span class="spanPrice">
+                                <p class="price"><c:out value="${product.getPrice()}" /></p>
+                            </span>
+                            <img src="${product.getPicture()}" alt="dish" class="dishImage">
+                        </div>
+                    </button>
+                </form>
+            </c:forEach>
 
             <span style="margin-left: 0.5%;margin-top: 15%;">
                 _____________________________________________________________________________________________________________
             </span>
 
             <div style="align-items: center;align-content: center;text-align: center;margin-left: 41.5%;margin-top: 5%;">
-                <form action="FrontController" method="get" style="float:left;margin-right: 2%;">
-                    <button class="pages" type="submit" style="border: none;background-color: white;font-size: 20px;text-decoration: underline;">
-                        1
-                    </button>
-                </form>
-                <form action="FrontController" method="get" style="float:left;margin-right: 2%;">
-                    <button class="pages" type="submit" style="border: none;background-color: white;font-size: 20px;">
-                        2
-                    </button>
-                </form>
-                <form action="FrontController" method="get" style="float:left;margin-right: 2%;">
-                    <button class="pages" type="submit" style="border: none;background-color: white;font-size: 20px;">
-                        3
-                    </button>
-                </form>
-                <form action="FrontController" method="get" style="float:left;margin-right: 2%;">
-                    <button class="pages" type="submit" style="border: none;background-color: white;font-size: 20px;">
-                        4
-                    </button>
-                </form>
-                <form action="FrontController" method="get" style="float:left;margin-right: 2%;">
-                    <button class="pages" type="submit" style="border: none;background-color: white;font-size: 20px;">
-                        5
-                    </button>
-                </form>
+                 <c:forEach var="number" items="${applicationScope['start_pages']}" >
+                    <form action="FrontController" method="get" style="float:left;margin-right: 2%;">
+                        <button class="pages" type="submit" style="border: none;background-color: white;font-size: 20px;text-decoration: underline;">
+                            <c:out value="${number}" />
+                        </button>
+                    </form>
+                 </c:forEach>
             </div>
 
             <div style="margin-top: 17%;width: 100%;">

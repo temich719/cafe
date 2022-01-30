@@ -19,7 +19,7 @@ public class DatabaseConfigReaderImpl implements DatabaseConfigReader {
     private void loadJDBC() {
         try {
             properties = new Properties();
-            FileInputStream fileInputStream = new FileInputStream("resources//databaseConfig.properties");
+            FileInputStream fileInputStream = new FileInputStream("C:\\Projects\\cafe\\src\\main\\resources\\databaseConfig.properties");
             properties.load(fileInputStream);
             fileInputStream.close();
         } catch (IOException e) {

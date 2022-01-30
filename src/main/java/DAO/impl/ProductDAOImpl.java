@@ -242,8 +242,9 @@ public class ProductDAOImpl extends AbstractDAO implements ProductDAO {
             resultSet = preparedStatement.executeQuery();
             resultSet.next();
             int count = resultSet.getInt(1);
+            int countOfPages = (int) Math.ceil((double) count / LIMIT);
             List<String> numbers = new ArrayList<>();
-            for (int i = 0; i < count; i++) {
+            for (int i = 0; i < countOfPages; i++) {
                 numbers.add(String.valueOf(i + 1));
             }
             return numbers;
